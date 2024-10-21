@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Magazin de Arta</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+  <link rel="stylesheet" href="cssfile.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-inverse">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Acasa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Despre Noi</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Postari</a>
+        </li>
+        <li class="nav-item">
+                <a class="glyphicon glyphicon-shopping-cart" href="#" onclick="return cart()"></a>
+        </li>
+      </ul>
+      <img class="background" src="./Images/pexels-pixabay-159862.jpg" alt="Img">
+
+      <div class="modal fade" id="ArtWorks" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title"></h1>
+            </div>
+            <div align="center" id="imageinfo" class="modal-body">
+              <table "width:100%">
+                <td id ="modalBody"; width="40%"></td>
+                <td height = "100%">
+                  <table height:"100%"; width="90%";>
+                    <tr>
+                      <th id="datetitle" height="57">Data</th>
+                      <td id="date"></td>
+                    </tr>
+                    <tr>
+                      <th id="typetitle" height="57">Tipul</th>
+                      <td id="type"></td>
+                    </tr>
+                    <tr>
+                      <th id="dimensionstitle" height="57">Dimensiunea</th>
+                      <td id="dimension"></td>
+                    </tr>
+                    <tr>
+                      <th id="locationtitle" height="57">Locatia</th>
+                      <td id="location"></td>
+                    </tr>
+                    <tr>
+                      <th id="artisttitle" height="57">Artistul</th>
+                      <td id="artist"></td>
+                    </tr>
+                    <tr>
+                      <th id="pricetitle" height="57">Pretul</th>
+                      <td id="price"></td>
+                    </tr>
+                    <tr>
+                      <th id="genretitle" height="57">Genul</th>
+                      <td id="genre"></td>
+                    </tr>
+                  </table>
+                </td>
+              </table>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="cart" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title">Cos de Cumparaturi</h1>
+              </div>
+
+      <div class="item">
+      <div class="buttons">
+                  <span class="delete-btn"></span>
+      </div>
+
+        <div class="image">
+          <img src="Images/ArtWork/guernica.jpg" height="100" width="100" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Guernica</span>
+          <span>Pablo Picasso</span>
+        </div>
+            <div class="testclass">
+                  <span class="quantity">
+                    <button class="plus-btn1" type="button" name="button">
+                      <img src="plus.svg" alt="" />
+                    </button>
+                    <input type="text" name="name" value="0">
+                    <button class="minus-btn1" type="button" name="button">
+                      <img src="minus.svg" alt="" />
+                    </button>
+                  </span>
+                  <span name="cartp" class="total-price" value="100">$100</span>
+          </div>
+        </div>
+
+                <!-- Product #2 -->
+      <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="Images/ArtWork/thepersistenceofmemory.png" height="100" width="100" alt="" />
+        </div>
+
+        <div class="description">
+          <span>The Persistence of Memory</span>
+          <span>Salvador Dali</span>
+        </div>
+
+        <div class="testclass">
+              <span class="quantity">
+                <button class="plus-btn1" type="button" name="button">
+                  <img src="plus.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="0">
+                <button class="minus-btn1" type="button" name="button">
+                  <img src="minus.svg" alt="" />
+                </button>
+              </span>
+              <span name="cartp" class="total-price"value="150">$150</span>
+      </div>
+      </div>
+
+      <!-- Product #3 -->
+      <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="Images/ArtWork/americangothic.jpg" height="100" width="100" alt="" />
+        </div>
+
+        <div class="description">
+          <span>American Gothic</span>
+          <span>Grant Wood</span>
+        </div>
+
+        <div class="testclass">
+              <span class="quantity">
+                <button class="plus-btn1" type="button" name="button">
+                  <img src="plus.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="0">
+                <button class="minus-btn1" type="button" name="button">
+                  <img src="minus.svg" alt="" />
+                </button>
+              </span>
+              <span name="cartp" class="total-price"value="125">$125</span>
+      </div>
+      </div>
+      <!-- Product #4 -->
+      <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="Images/ArtWork/monalisa.jpg" height="100" width="100" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Mona Lisa</span>
+          <span>Leonardo da Vinci</span>
+        </div>
+
+        <div class="testclass">
+              <span class="quantity">
+                <button class="plus-btn1" type="button" name="button">
+                  <img src="plus.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="0">
+                <button class="minus-btn1" type="button" name="button">
+                  <img src="minus.svg" alt="" />
+                </button>
+              </span>
+              <span name ="cartp"class="total-price"value="225">$225</span>
+      </div>
+      </div>
+      <!-- Product #5 -->
+      <div class="item">
+        <div class="buttons">
+          <span class="delete-btn"></span>
+        </div>
+
+        <div class="image">
+          <img src="Images/ArtWork/starrynight.jpg" height="100" width="100" alt="" />
+        </div>
+
+        <div class="description">
+          <span>Starry Night</span>
+          <span>Vincent van Gogh</span>
+        </div>
+
+        <div class="testclass">
+              <span class="quantity">
+                <button class="plus-btn1" type="button" name="button">
+                  <img src="plus.svg" alt="" />
+                </button>
+                <input type="text" name="name" value="0">
+                <button class="minus-btn1" type="button" name="button">
+                  <img src="minus.svg" alt="" />
+                </button>
+              </span>
+              <span name="cartp" class="total-price" value="200">$200</span>
+      </div>
+      </div>
+      <div align="center" id="imageinfo" class="modal-body">
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default check">Mai de parte</button>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Iesire</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      <div class="modal fade" id="shipping" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title"></h1>
+            </div>
+            <div align="center" id="imageinfo" class="modal-body">
+              <div>
+                         <h3 id= "modalHeader"><strong>Infortmatie de livrare</strong></h3>
+                    		<br />
+
+                    		 <label><b>Numele</b></label>
+                            <br />
+                            <input type="text" id="fname" placeholder="Numele" name="fname" required>
+                            <br /><br />
+                            <label><b>Prenumele</b></label>
+                            <br />
+                            <input type="text" id="lname" placeholder="Prenumele" name="lname" required>
+                            <br /><br />
+                            <label><b>Adresa</b></label>
+                  <br />
+                            <input type="text" id="address" placeholder="Adresa" name="address" required>
+                            <br /><br />
+                          <label><b>Cod Postal</b></label>
+                    			<br />
+                    		    <input type="text" id="postalc" placeholder="Cod Postal" name="postalcode" pattern="[a-zA-Z][0-9][a-zA-Z][0-9][a-zA-Z][0-9]" required>
+                    			<br /><br />
+                          <label><b>Oras</b></label>
+                    			<br />
+                    		    <input type="text" id="city" placeholder="Oras" name="city" required>
+                    			<br /><br />
+                    		    <label><b>Email</b></label>
+                    			<br />
+                    		    <input type="text" id="email" placeholder="Email" name="email" required>
+                    			<br /><br />
+                    		    <label><b>Numar de telefon</b></label>
+                    			<br />
+                    		    <input type="text" id="phone" placeholder="Numar" name="phone" pattern="[0-9]{10}" required>
+                            <br /><br />
+                            <div class="modal-footer">
+                        <button type="button" id="finalinvoice" class="btn btn-default invoice" data-dismiss="modal">Factura finală</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button>
+                      </div>
+                          </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="final" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 id= "modalHeader" class="modal-title"></h1>
+            </div>
+            <div align="center" id="imageinfo" class="modal-body">
+              <div>
+                  <h3 id= "modalHeader"><strong>Factura finală</strong></h3>
+                  <div class="item">
+                                        <div class="description">
+                                          <span>Total</span>
+                                          <span id='total'></span>
+                                        </div>
+
+                                        <div class="description">
+                                          <span>Taxa</span>
+                                          <span id='tax'></span>
+                                        </div>
+
+                                        <div class="description">
+                                          <span>Subtotal</span>
+                                          <span id='sub'></span>
+                                        </div>
+
+                                        <br />
+                                        <br />
+                                        </div>
+                                       <div class="invoice">
+                                    Numele: <span id="numele"></span><br />
+                                    Prenumele: <span id="prenumele"></span><br />
+                                    Adresa: <span id="adresa"></span><br />
+                                    Cod Postal: <span id="cod postal"></span><br />
+                                    Oras: <span id="orasul"></span><br />
+                                    Email: <span id="emailul"></span><br />
+                                    Numar: <span id="numarul"></span><br />
+                                    </div>
+                  <br />
+              </div>
+            </div>
+               <button type="button" class="btn btn-default" data-dismiss="modal">Inapoi</button>
+          </div>
+        </div>
+      </div>
+  </nav>
+
+  <br />
+  <h4>Lucrare de Arta:</h4>
+  <div class="dropdown">
+    <button class="dropbtn">Arta</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="return monaLisa()">Mona Lisa</a>
+      <a href="#" onClick="return americangothic()">American Gothic</a>
+      <a href="#" onClick="return starrynight()">Starry Night</a>
+      <a href="#" onClick="return thepersistenceofmemory()">The Persistence Of Memory</a>
+      <a href="#" onClick="return guernica()">Guernica</a>
+    </div>
+  </div>
+<br /><br />
+<h4>Pictori:</h4>
+  <div class="dropdown">
+    <button class="dropbtn">Pictori</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="return grantWood()">Grant Wood</a>
+      <a href="#" onclick="return leonardo()">Leonardo da Vinci</a>
+      <a href="#" onclick="return vincent()">Vincent Van Gogh</a>
+      <a href="#" onclick="return dali()">Salvador Dali</a>
+      <a href="#" onclick="return picasso()">Pablo Picasso</a>
+    </div>
+  </div>
+<br /><br />
+<h4>Muzeuri:</h4>
+  <div class="dropdown">
+    <button class="dropbtn">Muzeuri</button>
+    <div class="dropdown-content">
+      <a href="#" onclick="return smithsonian()">Smithsonian Institution</a>
+      <a href="#" onclick="return louvre()">The Lourve</a>
+      <a href="#" onclick="return acropolis()">Old Acropolis Museum</a>
+      <a href="#" onclick="return museonacional()">British Museum</a>
+      <a href="#" onclick="return prado()">The Prado</a>
+    </div>
+  </div>
+  <div class="text">
+      <h1> <strong>Magazin de Arta</strong> </h1>
+    <h2> <strong> Balaban Daniel</strong> </h2>
+    <footer>2024&copy;Colegiul Iulia Hasdeu</footer>
+  </div>
+  
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
